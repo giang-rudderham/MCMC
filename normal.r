@@ -16,10 +16,10 @@ sd <- 1
 
 burnin <- 2000
 iter <- 10000
-move_mu <- 0 #Giang's
-move_sigma <- 0 #Giang's
-accept_mu <- 0 #Giang's
-accept_sigma <- 0 #Giang's
+move_mu <- 0 
+move_sigma <- 0 
+accept_mu <- 0 
+accept_sigma <- 0 
 
 set.seed(23)
 
@@ -32,11 +32,11 @@ for(i in 1:(burnin + iter)) {
 	u <- runif(1)
 	if (u <= 0.5) {
 	  movetype = "mu"
-	  move_mu = move_mu + 1 #Giang's
+	  move_mu = move_mu + 1 
 	}
 	else {
 	  movetype = "sigma"
-	  move_sigma = move_sigma + 1 #Giang's
+	  move_sigma = move_sigma + 1 
 	}
 
 	# RW proposal (1-at-a-time)	
